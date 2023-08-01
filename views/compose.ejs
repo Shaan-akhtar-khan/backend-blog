@@ -1,0 +1,23 @@
+
+<%- include("partials/header.ejs") -%>
+
+<h1>Compose</h1> 
+
+<p> 
+    <form action="/compose" method="post">
+  <div class="form-group">
+       <!-- important so that app.post can catch the info send by form to the /compose route -->     
+   <label>Title</label>
+   <input class="form-control" type="text" name="text1" > 
+   <label>Post</label>
+   <textarea class="form-control"  name="text2" id="" cols="30" rows="10" ></textarea>
+  </div>
+  <button type="submit" name="button" class="btn btn-primary ">Publish</button>
+
+    </form>
+</p>
+
+<%- include("partials/footer.ejs") -%>
+
+
+

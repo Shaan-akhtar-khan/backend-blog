@@ -1,0 +1,19 @@
+
+<%- include("partials/header.ejs") -%>
+<h1>Home</h1>
+
+<p> <%= bhai %> </p>
+
+<%  Post.forEach ( function ( item ) {   %> 
+    <h1><%= item.titleText %></h1>
+    <p><%= item.bodyText.substring(0,100) + "..." %>
+        <!-- since the space between the h1 tags is to be replaced with jscode that will give us the text , so the value output tag is used -->
+
+        <a href="/posts/<%= item.titleText %>">read more</a>
+    </p>
+    <%    } )  %>
+
+
+
+
+<%- include("partials/footer.ejs") -%>
